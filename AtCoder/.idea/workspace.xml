@@ -16,7 +16,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bd9f92b-5a19-45b7-a7ff-06e6d267d0f6" name="Default Changelist" comment="" />
+    <list default="true" id="5bd9f92b-5a19-45b7-a7ff-06e6d267d0f6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +30,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="ProjectId" id="1PG7ZBXmzYpXsyyE9z984lxeLZX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -95,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565488632608</updated>
       <workItem from="1565488633680" duration="131000" />
-      <workItem from="1565488886948" duration="314000" />
+      <workItem from="1565488886948" duration="869000" />
     </task>
     <servers />
   </component>

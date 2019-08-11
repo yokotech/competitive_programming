@@ -74,6 +74,12 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-
+    int a, b;
+    cin >> a;
+    cin >> b;
+    int c = a + b;
+    if(a - b > c) c = a - b;
+    if(a * b > c) c = a * b;
+    cout << c << endl;
     return 0;
 }

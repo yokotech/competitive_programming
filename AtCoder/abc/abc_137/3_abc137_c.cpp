@@ -74,6 +74,32 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int n;
+    cin >> n;
+    vector<vector<char>> s(n, vector<char>(10));
+    vector<string> s2(n);
+    rep(i, n){
+        rep(j, 10){
+            cin >> s[i][j];
+        }
+        sort(s[i].begin(), s[i].end());
+        string tmp(s[i].begin(), s[i].end());
+        s2[i] = tmp;
+    }
+    sort(s2.begin(), s2.end());
+    ll ans = 0;
+    string cmp = s2[0];
+    ll cnt = 1;
+    for(int i = 1; i < n; i++){
+        if(cmp == s2[i]) cnt++;
+        else{
+            ans += cnt * (cnt - 1) / 2;
+            cnt = 1;
+            cmp = s2[i];
+        }
+    }
+    ans += cnt * (cnt - 1) / 2;
+    cout << ans << endl;
 
     return 0;
 }
