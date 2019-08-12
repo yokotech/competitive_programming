@@ -15,7 +15,7 @@ vector<ll> dist;
 
 void bellman_ford(){
     rep(i, n - 1){
-        rep(j, n){
+        rep1(j, n){
             if(dist[j] == INF) continue;
 
             rep(k, g[j].size()){
@@ -28,7 +28,7 @@ void bellman_ford(){
     }
 
     int flag = 1;
-    rep(j, n){
+    rep1(j, n){
         if(dist[j] == INF) continue;
 
         rep(k, g[j].size()){
@@ -42,7 +42,7 @@ void bellman_ford(){
         }
     }
     if(flag){
-        rep(i, n){
+        rep1(i, n){
             if(dist[i] == INF) cout << "INF" << "\n";
             else cout << dist[i] << "\n";
         }
@@ -51,16 +51,16 @@ void bellman_ford(){
 
 int main(){
     cin.tie(0);
-    ios::sync_with_stdio(false);//おまじないでcin, cout早くする
+    ios::sync_with_stdio(false);
     cin >> n >> m >> s;
-    g.resize(n);
-    dist.resize(n);
+    g.resize(n + 1);
+    dist.resize(n + 1);
     rep(i, m){
         int a, b, d;
         cin >> a >> b >> d;
         g[a].push_back(make_pair(b, d));
     }
-    rep(i, n){
+    rep1(i, n){
         dist[i] = INF;
     }
     dist[s] = 0;
