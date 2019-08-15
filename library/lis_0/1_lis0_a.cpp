@@ -1,4 +1,4 @@
-// 5_abc134_e
+// 1_lis0_a
 #include <algorithm>
 #include <bitset>
 #include <complex>
@@ -81,22 +81,21 @@ int main(){
         cin >> a[i];
     }
 
-    vector<int> l;
-    l.push_back(a[n - 1]);
     int length = 0;
+    vector<int> l;
+    l.push_back(a[0]);
 
-    for(int i = n - 2; i >= 0; i--){
-        if(a[i] >= l[length]){
+    for(int i = 1; i < n; i++){
+        if(a[i] > l[length]){
             l.push_back(a[i]);
             length++;
         }else{
-            auto j = upper_bound(l.begin(), l.end(), a[i]);
-            int k = j - l.begin();
-            l[k] = a[i];
+            auto k = lower_bound(l.begin(), l.end(), a[i]);
+            int j = k - l.begin();
+            l[j] = a[i];
         }
     }
 
     cout << length + 1 << endl;
-
     return 0;
 }
