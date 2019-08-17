@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.1)
+project(dsl_2)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++11)
+
+add_executable(1_dsl2_a 1_dsl2_a.cpp)
+add_executable(2_dsl2_b 2_dsl2_b.cpp)
+add_executable(3_dsl2_c 3_dsl2_c.cpp)
+add_executable(4_dsl2_d 4_dsl2_d.cpp)
+add_executable(5_dsl2_e 5_dsl2_e.cpp)
+add_executable(6_dsl2_f 6_dsl2_f.cpp)
+add_executable(7_dsl2_g 7_dsl2_g.cpp)
+add_executable(8_dsl2_h 8_dsl2_h.cpp)
+add_executable(9_dsl2_i 9_dsl2_i.cpp)
