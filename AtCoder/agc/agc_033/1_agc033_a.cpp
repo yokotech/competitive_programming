@@ -71,9 +71,60 @@ using namespace std;
 #define INF (1e16)
 typedef long long ll;
 
+vector<vector<char>> m;
+vector<vector<int>> d;
+
+
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int h, w;
+    cin >> h >> w;
+    m.resize(h, vector<char>(w));
+    d.resize(h, vector<int>(w));
 
+    queue<pair<int, int>> q;
+
+    rep(i, h){
+        rep(j, w){
+            d[i][j] = -1;
+            cin >> m[i][j];
+            if(m[i][j] == '#'){
+                d[i][j] = 0;
+                q.push(make_pair(i, j));
+            }
+        }
+    }
+
+    while(!q.empty()){
+        int x = q.front().first;
+        int y = q.front().second;
+        q.pop();
+        if(x > 0 && d[x - 1][y] == -1){
+            d[x - 1][y] = d[x][y] + 1;
+            q.push(make_pair(x - 1, y));
+        }
+        if(x < h - 1 && d[x + 1][y] == -1){
+            d[x + 1][y] = d[x][y] + 1;
+            q.push(make_pair(x + 1, y));
+        }
+        if(y > 0 && d[x][y - 1] == -1) {
+            d[x][y - 1] = d[x][y] + 1;
+            q.push(make_pair(x, y - 1));
+        }
+        if(y < w - 1 && d[x][y + 1] == -1){
+            d[x][y + 1] = d[x][y] + 1;
+            q.push(make_pair(x, y + 1));
+        }
+    }
+
+    int ans = 0;
+    rep(i, h){
+        rep(j, w){
+            if(d[i][j]> ans) ans = d[i][j];
+        }
+    }
+
+    cout << ans << endl;
     return 0;
 }
