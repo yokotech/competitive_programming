@@ -69,6 +69,7 @@ using namespace std;
 #define rep1(i, n) for(int i = 1; i <= (int)(n); i++)
 #define SZ(x) ((int)(x).size())
 #define INF (1e16)
+#define MOD (1000000007)
 typedef long long ll;
 
 int main(){
