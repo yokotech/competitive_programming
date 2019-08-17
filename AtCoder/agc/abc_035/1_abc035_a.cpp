@@ -74,6 +74,44 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    rep(i, n){
+        cin >> a[i];
+    }
+    sort(a.begin(), a.end());
 
+    if(a[0] == 0 && a[n - 1] == 0){
+        cout << "Yes" << endl;
+        return 0;
+    }
+    if(n % 3 != 0){
+        cout << "No" << endl;
+        return 0;
+    }
+
+    unsigned int x, y, z;
+    x = a[0];
+    y = a[n / 3];
+    z = a[2 * n / 3];
+    int flag = 0;
+    rep(i, n / 3){
+        if(a[i] != x) flag = 1;
+    }
+    for(int i = n / 3; i < 2 * n / 3; i++){
+        if(a[i] != y) flag = 1;
+    }
+    for(int i = 2 * n / 3; i < n; i++){
+        if(a[i] != z) flag = 1;
+    }
+
+    if((x ^ y) != z) flag = 1;
+
+    if(flag){
+        cout << "No" << endl;
+    }else{
+        cout << "Yes" << endl;
+    }
     return 0;
 }
