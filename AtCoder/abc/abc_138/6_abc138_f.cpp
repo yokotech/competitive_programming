@@ -72,9 +72,22 @@ using namespace std;
 #define MOD (1000000007)
 typedef long long ll;
 
+int msb(ll a){
+    int retval = 0;
+    while(a > 1){
+        a = a >> 1;
+        retval++;
+    }
+    return retval;
+}
+
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-
+    ll l, r;
+    cin >> l >> r;
+    int nr = msb(r);
+    int nl = msb(l);
+    cout << nr << endl << nl << endl;
     return 0;
 }
