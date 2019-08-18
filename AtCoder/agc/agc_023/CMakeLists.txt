@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.1)
+project(agc_023)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++11)
+
+add_executable(1_agc023_a 1_agc023_a.cpp)
+add_executable(2_agc023_b 2_agc023_b.cpp)
+add_executable(3_agc023_c 3_agc023_c.cpp)
+add_executable(4_agc023_d 4_agc023_d.cpp)
+add_executable(5_agc023_e 5_agc023_e.cpp)
+add_executable(6_agc023_f 6_agc023_f.cpp)
