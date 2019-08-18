@@ -75,6 +75,17 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-
+    int n;
+    cin >> n;
+    vector<double> v(n);
+    rep(i, n){
+        cin >> v[i];
+    }
+    sort(v.begin(), v.end());
+    double ans = v[0];
+    for(int i = 1; i < n; i++){
+        ans = (ans + v[i]) / 2;
+    }
+    cout << setprecision(15) << ans << endl;
     return 0;
 }

@@ -1,4 +1,4 @@
-#Library一覧
+# Library一覧
 - Eratosthenesの篩
 - gcd
 - is_prime
