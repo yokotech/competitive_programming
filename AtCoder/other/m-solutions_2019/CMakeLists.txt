@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.1)
+project(m-solutions_2019)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++11)
+
+add_executable(1_m-solutions2019_a 1_m-solutions2019_a.cpp)
+add_executable(2_m-solutions2019_b 2_m-solutions2019_b.cpp)
+add_executable(3_m-solutions2019_c 3_m-solutions2019_c.cpp)
+add_executable(4_m-solutions2019_d 4_m-solutions2019_d.cpp)
+add_executable(5_m-solutions2019_e 5_m-solutions2019_e.cpp)
+add_executable(6_m-solutions2019_f 6_m-solutions2019_f.cpp)
