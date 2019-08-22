@@ -91,13 +91,21 @@ int main(){
         cin >> p[i];
     }
 
-    ll ans = 1;
-    rep(i, m){
-        ll tmp = 0;
-        int k = v[i].size();
-        rep(j, 1 << k){
-            
+    ll ans = 0;
+    for(int i = 0; i < (1 << n); i++){
+        int flag = 1;
+        rep(j, m){
+            int cnt = 0;
+            rep(k, v[j].size()){
+                int h = v[j][k];
+                h--;
+                if(i & (1 << h)) cnt++;
+            }
+            if(cnt % 2 != p[j]) flag = 0;
         }
+        if(flag) ans++;
     }
+
+    cout << ans << endl;
     return 0;
 }

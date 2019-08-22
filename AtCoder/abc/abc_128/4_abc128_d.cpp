@@ -72,9 +72,22 @@ using namespace std;
 #define MOD (1000000007)
 typedef long long ll;
 
+// 端っこからk - l個とってlこ返すイメージ
+// 戻すのは最後で良い
+
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int n, k;
+    cin >> n >> k;
+    vector<int> v(n);
+    rep(i, n){
+        cin >> v[i];
+    }
+
+    vector<vector<int>> l(k, vector<int>(2));
+    vector<vector<int>> r(k, vector<int>(2));
+
 
     return 0;
 }
