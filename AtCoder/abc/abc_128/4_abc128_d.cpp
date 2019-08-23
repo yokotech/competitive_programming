@@ -80,13 +80,29 @@ int main(){
     ios::sync_with_stdio(false);
     int n, k;
     cin >> n >> k;
-    vector<int> v(n);
-    rep(i, n){
+    vector<int> v(n + 1);
+    rep1(i, n){
         cin >> v[i];
     }
 
-    vector<vector<int>> l(k, vector<int>(2));
-    vector<vector<int>> r(k, vector<int>(2));
+   if(k >= 2 * n){
+       sort(v.begin(), v.end(), greater<int>);
+       int ans = 0;
+       int i = 1;
+       while(v[i] > 0 && i <= n){
+           ans += v[i];
+           i++;
+       }
+       cout << ans << endl;
+       return 0;
+   }
+
+   ll ans = 0;
+   vector<int> u;
+   rep(i, n){
+       if(i > k) break;
+
+   }
 
 
     return 0;
