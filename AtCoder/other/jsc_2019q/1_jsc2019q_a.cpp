@@ -75,6 +75,18 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int m, d;
+    cin >> m >> d;
 
+    int cnt = 0;
+    for(int i = 1; i <= m; i++){
+        for(int j = 1; j <= d; j++){
+            int a = j / 10;
+            int b = j % 10;
+
+            if(a >= 2 && b >= 2 && a * b == i) cnt++;
+        }
+    }
+    cout << cnt << endl;
     return 0;
 }

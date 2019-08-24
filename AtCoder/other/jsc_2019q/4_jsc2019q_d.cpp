@@ -72,9 +72,24 @@ using namespace std;
 #define MOD (1000000007)
 typedef long long ll;
 
+vector<int> used;
+
+void hoge(){
+
+}
+
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int n;
+    string s;
+    cin >> n;
+    cin >> s;
+    used.resize(2 * n);
+    rep(i, 2 * n){
+        used[i] = 0;
+    }
+    rep()
 
     return 0;
 }

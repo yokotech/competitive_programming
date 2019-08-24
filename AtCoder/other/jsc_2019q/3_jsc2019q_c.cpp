@@ -75,6 +75,11 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+
 
     return 0;
 }

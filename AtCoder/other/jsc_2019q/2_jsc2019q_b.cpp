@@ -75,6 +75,48 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n, k;
+    cin >> n >> k;
+
+    vector<ll> a(n);
+    rep(i, n){
+        cin >> a[i];
+    }
+
+    vector<ll> d(n);
+    vector<ll> e(n);
+
+    rep(i, n){
+        ll cnt = 0;
+        rep(j, n){
+            if(a[i] > a[j]) cnt++;
+        }
+        d[i] = cnt;
+
+        ll cnt2 = 0;
+        for(int j = i + 1; j < n; j++){
+            if(a[i] > a[j]) cnt2++;
+        }
+        e[i] = cnt2;
+    }
+
+    ll ans = 0;
+    rep(i, n){
+//        ans = (ans + d[i] * k * (k - 1) / 2 + e[i] * k) % MOD;
+        ans = (ans + e[i] * k) % MOD;
+        ll tmp;
+        if(k % 2 == 0){
+            tmp = k / 2;
+            tmp = tmp * d[i] % MOD;
+            tmp = tmp * (k - 1) % MOD;
+        }else{
+            tmp = (k - 1) / 2;
+            tmp = tmp * d[i] % MOD;
+            tmp = tmp * k % MOD;
+        }
+        ans = (ans + tmp) % MOD;
+    }
+    cout << ans << endl;
 
     return 0;
 }
