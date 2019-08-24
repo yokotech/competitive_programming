@@ -75,6 +75,9 @@ typedef long long ll;
 int h, w;
 vector<vector<char>> m;
 vector<vector<int>> visited;
+int xmin, xmax, ymin, ymax;
+int masu;
+int a = 0; int b = 0; int c = 0;
 
 void init_visited(){
     rep(i, h){
@@ -84,70 +87,14 @@ void init_visited(){
     }
 }
 
-void dfs_ty(int x, int y){
-    visited[x][y] = 1;
-    if(x > 0 && visited[x - 1][y] == 0 && m[x - 1][y] == 'o'){
-        dfs_ty(x - 1, y);
-    }
-    if(x < h - 1 && visited[x + 1][y] == 0 && m[x + 1][y] == 'o'){
-        dfs_ty(x + 1, y);
-    }
-    if(y > 0 && visited[x][y - 1] == 0 && m[x][y - 1] == 'o'){
-        dfs_ty(x, y - 1);
-    }
-    if(y < w - 1 && visited[x][y + 1] == 0 && m[x][y + 1] == 'o'){
-        dfs_ty(x, y + 1);
-    }
-}
-
-int tateyoko(){
-    int cnt = 0;
-    init_visited();
-    rep(i, h){
-        rep(j, w){
-            if(m[i][j] == '.') continue;
-            if(!visited[i][j]){
-                dfs_ty(i, j);
-                cnt++;
-            }
-        }
-    }
-    return cnt;
-}
-
-void dfs_naname(int x, int y){
-    visited[x][y] = 1;
-    if(x > 0 && y > 0 && visited[x - 1][y - 1] == 0 && m[x - 1][y - 1] == 'o'){
-        dfs_naname(x - 1, y - 1);
-    }
-    if(x > 0 && y < w - 1 && visited[x - 1][y + 1] == 0 && m[x - 1][y + 1] == 'o'){
-        dfs_naname(x - 1, y + 1);
-    }
-    if(x < h - 1  && y > 0 && visited[x + 1][y - 1] == 0 && m[x + 1][y - 1] == 'o'){
-        dfs_naname(x + 1, y - 1);
-    }
-    if(x < h - 1 && y < w - 1 && visited[x + 1][y + 1] == 0 && m[x + 1][y + 1] == 'o'){
-        dfs_naname(x + 1, y + 1);
-    }
-}
-
-int naname(){
-    int cnt = 0;
-    init_visited();
-    rep(i, h){
-        rep(j, w){
-            if(m[i][j] == '.') continue;
-            if(!visited[i][j]){
-                dfs_naname(i, j);
-                cnt++;
-            }
-        }
-    }
-    return cnt;
-}
-
 void dfs_tynaname(int x, int y){
     visited[x][y] = 1;
+    masu++;
+    if(x < xmin) xmin = x;
+    if(x > xmax) xmax = x;
+    if(y < ymin) ymin = y;
+    if(y > ymax) ymax = y;
+
     if(x > 0 && visited[x - 1][y] == 0 && m[x - 1][y] == 'o'){
         dfs_tynaname(x - 1, y);
     }
@@ -175,19 +122,27 @@ void dfs_tynaname(int x, int y){
     }
 }
 
-int tynaname(){
-    int cnt = 0;
+void tynaname(){
     init_visited();
     rep(i, h){
         rep(j, w){
             if(m[i][j] == '.') continue;
             if(!visited[i][j]){
+                masu = 0;
+                xmin = i;
+                xmax = i;
+                ymin = j;
+                ymax = j;
                 dfs_tynaname(i, j);
-                cnt++;
+
+                int saizu = (xmax - xmin + 1) / 5;
+                int jou = pow(saizu, 2);
+                if(masu == 12 * jou) a++;
+                else if(masu == 16 * jou) b++;
+                else if(masu == 11 * jou) c++;
             }
         }
     }
-    return cnt;
 }
 
 int main(){
@@ -202,15 +157,7 @@ int main(){
         }
     }
 
-    int x = tateyoko();
-    int y = naname();
-    int z = tynaname();
-
-    int a = (-x + -2 * y + 19 * z) / 7;
-    int b = (-3 * x + y + 8 * z) / 7;
-    int c = (4 * x + y - 20 * z) / 7;
-
+    tynaname();
     cout << a << " " << b << " " << c << endl;
-
     return 0;
 }
