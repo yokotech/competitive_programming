@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="arc_005"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="3_arc005_c">
+				<Option output="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/3_arc005_c" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 3_arc005_c"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="3_arc005_c/fast">
+				<Option output="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/3_arc005_c" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 3_arc005_c/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="1_arc005_a">
+				<Option output="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/1_arc005_a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 1_arc005_a"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="1_arc005_a/fast">
+				<Option output="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/1_arc005_a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 1_arc005_a/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="4_arc005_d">
+				<Option output="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/4_arc005_d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 4_arc005_d"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="4_arc005_d/fast">
+				<Option output="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/4_arc005_d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 4_arc005_d/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="2_arc005_b">
+				<Option output="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/2_arc005_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 2_arc005_b"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="2_arc005_b/fast">
+				<Option output="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/2_arc005_b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 2_arc005_b/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/1_arc005_a.cpp">
+			<Option target="1_arc005_a"/>
+		</Unit>
+		<Unit filename="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/2_arc005_b.cpp">
+			<Option target="2_arc005_b"/>
+		</Unit>
+		<Unit filename="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/3_arc005_c.cpp">
+			<Option target="3_arc005_c"/>
+		</Unit>
+		<Unit filename="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/4_arc005_d.cpp">
+			<Option target="4_arc005_d"/>
+		</Unit>
+		<Unit filename="/Users/yokoyama/development/competitive_programming/AtCoder/arc/arc_005/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
