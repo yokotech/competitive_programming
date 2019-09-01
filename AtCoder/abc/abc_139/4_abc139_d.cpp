@@ -72,14 +72,32 @@ using namespace std;
 #define MOD (1000000007)
 typedef long long ll;
 
+int func(int n){
+    vector<int> v(n);
+    rep(i, n){
+        v[i] = i + 1;
+    }
+    int retval = 0;
+    do{
+        int tmp = 0;
+        rep(i, n){
+            tmp += v[i] % (i + 1);
+        }
+        retval = max(retval, tmp);
+    }while(next_permutation(v.begin(), v.end()));
+
+    return retval;
+}
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    int n;
-    cin >> n;
+    // next_permutation使って小さいNでの愚直解作るコード
 
-
+    rep1(i, 13){
+        int a = func(i);
+        cout << a << endl;
+    }
 
     return 0;
 }
