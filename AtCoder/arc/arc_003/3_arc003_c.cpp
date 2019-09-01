@@ -1,4 +1,4 @@
-// 4_tenkaichi2012final_d
+// 3_arc003_c
 #include <algorithm>
 #include <bitset>
 #include <complex>
@@ -72,35 +72,9 @@ using namespace std;
 #define MOD (1000000007)
 typedef long long ll;
 
-ll dp[1 << 18][18];
-int x[18];
-int y[18];
-
-ll func(int bit, int v){
-
-}
-
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    int n;
-    cin >> n;
-    if(n > 18){
-        cout << "うんち！" << endl;
-    }
-    rep(i, n){
-        cin >> x[i] >> y[i];
-    }
-
-    rep(i, 1 << n){
-        rep(j, n){
-            dp[i][j] = -1;
-        }
-    }
-
-    int bit = (1 << n) - 1;
-
-
 
     return 0;
 }
