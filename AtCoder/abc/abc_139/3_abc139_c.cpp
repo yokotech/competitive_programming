@@ -75,6 +75,23 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-
+    int n;
+    cin >> n;
+    int cnt = 0;
+    int ans = 0;
+    int h;
+    cin >> h;
+    rep(i, n - 1){
+        int a;
+        cin >> a;
+        if(h >= a) cnt++;
+        else{
+            ans = max(ans, cnt);
+            cnt = 0;
+        }
+        h = a;
+    }
+    ans = max(ans, cnt);
+    cout << ans << endl;
     return 0;
 }

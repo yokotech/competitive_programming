@@ -75,6 +75,13 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-
+    string s, t;
+    cin >> s;
+    cin >> t;
+    int cnt = 0;
+    rep(i, 3){
+        if(s[i] == t[i]) cnt++;
+    }
+    cout << cnt << endl;
     return 0;
 }

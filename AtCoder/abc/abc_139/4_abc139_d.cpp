@@ -72,9 +72,14 @@ using namespace std;
 #define MOD (1000000007)
 typedef long long ll;
 
+
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int n;
+    cin >> n;
+
+
 
     return 0;
 }
