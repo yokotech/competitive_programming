@@ -77,24 +77,53 @@ int main(){
     ios::sync_with_stdio(false);
     int n, k;
     cin >> n >> k;
-    if(n == k){
-        cout << endl;
-        return 0;
-    }
-    
     vector<int> a(k);
+    vector<int> b(n);
+    rep(i, n){
+        b[i] = 0;
+    }
     rep(i, k){
         cin >> a[i];
         a[i]--;
+        b[a[i]] = 1;
     }
-
-    vector<pair<string, int>> s(n);
+    vector<string> s(n);
     rep(i, n){
-        string t;
-        cin >> t;
-        s[i] = make_pair(t, i);
+        cin >> s[i];
     }
 
+    string scmp = s[a[0]];
+    vector<int> preflen(n);
+
+    rep(i, n){
+        int tmp = 0;
+        rep(j, min(scmp.size(), s[i].size())){
+            if(s[i][j] == scmp[j]) tmp++;
+            else break;
+        }
+        preflen[i] = tmp;
+    }
+
+    int commin = 100000;
+    int incommax = -1;
+
+    rep(i, n){
+        if(b[i]){
+            commin = min(preflen[i], commin);
+        }else{
+            incommax = max(preflen[i], incommax);
+        }
+    }
+
+    if(commin <= incommax){
+        cout << -1 << endl;
+    }else{
+        if(incommax == -1){
+            cout << "" << endl;
+        }else{
+            cout << s[a[0]].substr(0, incommax + 1);
+        }
+    }
 
     return 0;
 }
