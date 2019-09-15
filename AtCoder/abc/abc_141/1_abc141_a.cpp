@@ -75,6 +75,11 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-
+    string s;
+    cin >> s;
+    if(s[0] == 'S') cout << "Cloudy";
+    else if(s[0] == 'C') cout << "Rainy";
+    else cout << "Sunny";
+    cout << endl;
     return 0;
 }

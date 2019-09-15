@@ -75,6 +75,27 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int n, k, q;
+    cin >> n >> k >> q;
+
+    vector<int> b(n);
+    rep(i, n){
+        b[i] = 0;
+    }
+    rep(i, q){
+        int a;
+        cin >> a;
+        a--;
+        b[a]++;
+    }
+
+    rep(i, n){
+        if(k - (q - b[i]) > 0){
+            cout << "Yes" << endl;
+        }else{
+            cout << "No" << endl;
+        }
+    }
 
     return 0;
 }

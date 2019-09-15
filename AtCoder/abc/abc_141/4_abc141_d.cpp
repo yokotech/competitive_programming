@@ -75,6 +75,34 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int n, m;
+    cin >> n >> m;
+    priority_queue<int> a;
+    rep(i, n){
+        int b;
+        cin >> b;
+        a.push(b);
+    }
+
+    rep(i, m){
+        int b;
+        b = a.top();
+        a.pop();
+        b /= 2;
+
+        a.push(b);
+    }
+
+    ll s = 0;
+    rep(i, n){
+        int b;
+        b = a.top();
+        s += b;
+        a.pop();
+    }
+
+    cout << s << endl;
+
 
     return 0;
 }

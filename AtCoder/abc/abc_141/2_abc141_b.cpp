@@ -75,6 +75,25 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-
+    string s;
+    cin >> s;
+    rep(i, s.length()){
+        if(i % 2 == 0){
+            if(s[i] == 'R' || s[i] == 'U' || s[i] == 'D'){
+                continue;
+            }else{
+                cout << "No" << endl;
+                return 0;
+            }
+        }else{
+            if(s[i] == 'L' || s[i] == 'U' || s[i] == 'D'){
+                continue;
+            }else{
+                cout << "No" << endl;
+                return 0;
+            }
+        }
+    }
+    cout << "Yes" << endl;
     return 0;
 }
