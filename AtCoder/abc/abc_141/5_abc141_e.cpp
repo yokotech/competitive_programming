@@ -72,95 +72,52 @@ using namespace std;
 #define MOD (1000000007)
 typedef long long ll;
 
-vector<pair<string, int>> tmp;
+vector<int> z_algorithm(string s){
+    int n = s.length();
+    int l = 0, r = 0;
+    vector<int> z(n);
 
-
-//string func(string t){
-//    string alpha = "abcdefghijklmnopqrstuvwxyz";
-//    int l = t.length();
-//    int flag = 1;
-//    rep(i, l){
-//        if(t[i] != 'z'){
-//            flag = 0;
-//            break;
-//        }
-//    }
-//    if(flag){
-//        return t + 'a';
-//    }
-//
-//    if(t[l - 1] != 'z'){
-//        int a = t[l - 1] - 'a';
-//        t[l - 1] = alpha[a + 1];
-//        return t;
-//    }else{
-//        return func(t.substr(0, l - 1));
-//    }
-//}
-
-bool func2(string a, string b){
-    // aがbを接頭辞に含まなかったらtrue
-    int na = a.length();
-    int nb = b.length();
-    if(na < nb){
-        return true;
+    z[0] = n;
+    for(int i = 1; i < n; i++){
+        if(i > r){
+            l = r = i;
+            while(r < n && s[r - l] == s[r]) r++;
+            z[i] = r - l;
+            r--;
+        }else{
+            int k = i - l;
+            if(z[k] < r - i + 1){
+                z[i] = z[k];
+            }else{
+                l = i;
+                while(r < n && s[r - l] == s[r]) r++;
+                z[i] = r - l;
+                r--;
+            }
+        }
     }
 
-    if(a.substr(0, nb) == b){
-        return false;
-    }else{
-        return true;
-    }
+    return z;
 }
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+
     int n;
     cin >> n;
     string s;
     cin >> s;
-    tmp.resize(n);
 
-    rep1(i, n){
-        string t = s.substr(n - i, i);
-        tmp[i - 1] = make_pair(t, n - i);
-    }
-    sort(tmp.begin(), tmp.end());
-
-    vector<string> suf_s(n);
-    vector<int> suf_i(n);
+    int ans = 0;
     rep(i, n){
-        suf_s[i] = tmp[i].first;
-        suf_i[i] = tmp[i].second;
-    }
-
-    int len = 0;
-    for(int l = 1; l <= n / 2; l++){
-        int flag = 0;
-        for(int i = 0; i <= n - 2 * l; i++){
-            // s.substr(i, l)を検索してi + lより先に出てくるやつがいたら更新
-            string t = s.substr(i, l);
-            auto itr = lower_bound(suf_s.begin(), suf_s.end(), t);
-            if(itr != suf_s.end()){
-                int k = distance(suf_s.begin(), itr);
-                for(int j = k; j < n; j++){
-                    // suf_s[k]がtを含まなかったらbreak
-                    if(func2(suf_s[k], t)) break;
-
-                    if(suf_i[k] >= i + l){
-                        len = l;
-                        flag = 1;
-                        break;
-                    }
-                }
-            }
-            if(flag) break;
+        string t = s.substr(i, n - i);
+        vector<int> z = z_algorithm(t);
+        for(int j = 1; j < n - i; j++){
+            if(z[j] > j) z[j] = j;
+            ans = max(z[j], ans);
         }
-        if(flag == 0) break;
     }
-    cout << len << endl;
-
-
+    cout << ans << endl;
     return 0;
 }
