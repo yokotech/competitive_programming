@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.1)
+project(yukicoder_contest_224)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++11)
+
+add_executable(1_yukicoder_contest224_a 1_yukicoder_contest224_a.cpp)
+add_executable(2_yukicoder_contest224_b 2_yukicoder_contest224_b.cpp)
+add_executable(3_yukicoder_contest224_c 3_yukicoder_contest224_c.cpp)
+add_executable(4_yukicoder_contest224_d 4_yukicoder_contest224_d.cpp)
+add_executable(5_yukicoder_contest224_e 5_yukicoder_contest224_e.cpp)
