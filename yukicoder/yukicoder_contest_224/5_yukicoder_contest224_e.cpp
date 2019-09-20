@@ -75,6 +75,30 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    double a, b, n;
+    cin >> a >> b >> n;
+
+    if(n == 0){
+        cout << 0 << endl;
+        return 0;
+    }else if(n == 1){
+        cout << 1 << endl;
+        return 0;
+    }
+
+    if(a == 0 && b == 0){
+        cout << 0 << endl;
+        return 0;
+    }
+
+    double alpha, beta;
+    alpha = a + sqrt(a * a + 4 * b) / 2;
+    beta =  a - sqrt(a * a + 4 * b) / 2;
+
+    double c = 1 / (alpha - beta);
+
+    ll ans1 = ll(c * alpha);
+    ll ans2 = ll(-c * beta);
 
     return 0;
 }

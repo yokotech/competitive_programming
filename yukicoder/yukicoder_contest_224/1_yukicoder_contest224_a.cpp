@@ -75,6 +75,29 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n;
+    cin >> n;
 
+    if(n == 1){
+        cout << 0 << endl << 1 << endl;
+        return 0;
+    }
+
+    int i = 0;
+    ll ans = n;
+    while(1){
+        if(n % 2 == 0){
+            n = n / 2;
+            i++;
+        }else{
+            n = 3 * n + 1;
+            i++;
+        }
+        ans = max(n, ans);
+        if(n == 1){
+            cout << i << endl << ans << endl;
+            return 0;
+        }
+    }
     return 0;
 }
