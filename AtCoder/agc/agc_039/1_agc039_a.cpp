@@ -1,4 +1,4 @@
-// 5_abc142_e
+// 1_agc039_a
 #include <algorithm>
 #include <bitset>
 #include <complex>
@@ -75,23 +75,51 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    string s;
+    ll k;
+    cin >> s;
+    cin >> k;
+    ll n = s.length();
+    ll cnt = 0;
 
-    int n, m;
-    cin >> n >> m;
-    vector<int> a(m);
-    vector<int> b(m);
-    vector<vector<int>> c(m);
-    rep(i, m){
-        cin >> a[i] >> b[i];
-        c[i].resize(b[i]);
-        rep(j, b[i]){
-            cin >> c[i][j];
-            c[i][j]--;
+    rep(i, n - 1){
+        if(s[i] != s[i + 1]) break;
+
+        if(i == n - 2){
+            cout << (k * n) / 2 << endl;
+            return 0;
         }
     }
 
-    vector<vector<int>> dp(m, vector<int> (1 << n));
+    rep(i, n - 1){
+        if(s[i] == s[i + 1]){
+            cnt++;
+            i++;
+        }
+    }
 
+    ll ans = k * cnt;
+    if(s[0] == s[n - 1]){
+        ll a, b;
+        for(int i = 0; i < n - 1; i++){
+            if(s[i] == s[i + 1]) continue;
+            else{
+                a = i + 1;
+                break;
+            }
+        }
+        for(int i = n - 1; i > 0; i--){
+            if(s[i] == s[i - 1]) continue;
+            else{
+                b = n - i;
+                break;
+            }
+        }
+
+        cout << ans - (k - 1) * (a / 2 + b / 2 - (a + b) / 2) << endl;
+    }else{
+        cout << ans << endl;
+    }
 
 
     return 0;

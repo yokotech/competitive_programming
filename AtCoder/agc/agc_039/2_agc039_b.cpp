@@ -1,4 +1,4 @@
-// 5_abc142_e
+// 2_agc039_b
 #include <algorithm>
 #include <bitset>
 #include <complex>
@@ -75,24 +75,6 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-
-    int n, m;
-    cin >> n >> m;
-    vector<int> a(m);
-    vector<int> b(m);
-    vector<vector<int>> c(m);
-    rep(i, m){
-        cin >> a[i] >> b[i];
-        c[i].resize(b[i]);
-        rep(j, b[i]){
-            cin >> c[i][j];
-            c[i][j]--;
-        }
-    }
-
-    vector<vector<int>> dp(m, vector<int> (1 << n));
-
-
 
     return 0;
 }
