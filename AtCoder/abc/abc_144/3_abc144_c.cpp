@@ -75,6 +75,15 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n;
+    cin >> n;
+    ll ans = n - 1;
 
+    for(ll i = 2; i <= sqrt(n); i++){
+        if(n % i == 0){
+            ans = min(ans, i - 1 + n / i - 1);
+        }
+    }
+    cout << ans << endl;
     return 0;
 }

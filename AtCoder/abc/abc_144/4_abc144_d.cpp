@@ -75,6 +75,18 @@ typedef long long ll;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    double a, b, x;
+    cin >> a >> b >> x;
+    double v = a * a * b;
+    double c, theta;
 
+    if(x > v / 2){
+        c = 2 * (a * a * b - x) / (a * a);
+        theta = atan(c / a);
+    }else{
+        c = 2 * x / (a * b);
+        theta = atan(b / c);
+    }
+    cout << setprecision(15) << theta * 180 / M_PI << endl;
     return 0;
 }
