@@ -80,13 +80,16 @@ int main(){
     vector<ll> a(n);
     vector<ll> f(n);
     ll sa = 0;
+    ll m = 0;
     rep(i, n){
         cin >> a[i];
         sa += a[i];
     }
     rep(i, n){
         cin >> f[i];
+        m = max(m, a[i] * f[i]);
     }
+
     if(sa <= k){
         cout << 0 << endl;
         return 0;
@@ -94,37 +97,37 @@ int main(){
     sort(a.begin(), a.end(), greater<int>());
     sort(f.begin(), f.end());
 
-    priority_queue< pair<ll, int> > q;
-    rep(i, n){
-        pair<ll, int> p = make_pair(a[i] * f[i], i);
-        q.push(p);
-    }
+    ll ans = m;
+    ll l = 1;
+    ll r = m;
+    ll c = (l + r) / 2;
+    while(1){
+        if(l >= r){
+            ll cnt = 0;
+            rep(i, n){
+                if(a[i] * f[i] <= c) continue;
+                else cnt += a[i] - c / f[i];
+            }
+            if(k >= cnt) ans = min(ans, r);
 
-    while(k > 0){
-        pair<ll, int> p1, p2;
-        p1 = q.top();
-        q.pop();
-        p2 = q.top();
-
-        ll cost1 = p1.first;
-        int i1 = p1.second;
-        ll cost2 = p2.first;
-        int i2 = p2.second;
-
-        ll moku = cost2 / f[i1];
-        if(a[i1] - moku > k){
-            a[i1] -= k;
-            k = 0;
-            q.push(make_pair(a[i1] * f[i1], i1));
-        }else if(a[i1] != moku){
-            k -= a[i1] - moku;
-            a[i1] = moku;
-            q.push(make_pair(a[i1] * f[i1], i1));
+            break;
+        }
+        ll cnt = 0;
+        rep(i, n){
+            if(a[i] * f[i] <= c) continue;
+            else cnt += a[i] - c / f[i];
+        }
+        if(k >= cnt){
+            ans = min(ans, c);
+            r = c - 1;
+            c = (l + r) / 2;
         }else{
-            q.pop();
-
+            l = c + 1;
+            c = (l + r) / 2 ;
         }
     }
-    cout << q.top().first << endl;
+
+    cout << ans << endl;
+
     return 0;
 }
