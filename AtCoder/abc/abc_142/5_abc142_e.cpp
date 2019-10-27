@@ -68,7 +68,7 @@ using namespace std;
 #define rep(i, n) for(int i = 0; i < (int)(n); i++)
 #define rep1(i, n) for(int i = 1; i <= (int)(n); i++)
 #define SZ(x) ((int)(x).size())
-#define INF (1e16)
+#define INF (1e9)
 #define MOD (1000000007)
 typedef long long ll;
 
@@ -90,8 +90,26 @@ int main(){
         }
     }
 
-    vector<int> d(1 << n);
+    vector<int> dp(1 << n);
+    rep(i, 1 << n){
+        dp[i] = INF;
+    }
+    dp[0] = 0;
 
+    rep(i, m){
+        int state = 0;
+        rep(j, b[i]){
+            state |= 1 << c[i][j];
+        }
+
+        rep(j, 1 << n){
+            dp[j | state] = min(dp[j | state], dp[j] + a[i]);
+        }
+    }
+
+    int ans = dp[(1 << n) - 1];
+    if(ans == INF) cout << - 1 << endl;
+    else cout << ans << endl;
 
     return 0;
 }
