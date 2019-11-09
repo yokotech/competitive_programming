@@ -149,6 +149,7 @@ int main(){
         }
 
         if(p >= q){
+            make_error();
             cout << "Yes" << endl;
             return 0;
         }
@@ -166,7 +167,6 @@ int main(){
             }
         }
         if(s[q - 1] - s[p - 1] == 0){
-            s[-1] = 0;
             cout << "Yes" << endl;
             return 0;
         }
