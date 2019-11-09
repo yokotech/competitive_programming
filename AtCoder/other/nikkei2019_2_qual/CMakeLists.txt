@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.1)
+project(nikkei2019_2_qual)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++11)
+
+add_executable(1_nikkei2019_2qual_a 1_nikkei2019_2qual_a.cpp)
+add_executable(2_nikkei2019_2qual_b 2_nikkei2019_2qual_b.cpp)
+add_executable(3_nikkei2019_2qual_c 3_nikkei2019_2qual_c.cpp)
+add_executable(4_nikkei2019_2qual_d 4_nikkei2019_2qual_d.cpp)
+add_executable(5_nikkei2019_2qual_e 5_nikkei2019_2qual_e.cpp)
+add_executable(6_nikkei2019_2qual_f 6_nikkei2019_2qual_f.cpp)
